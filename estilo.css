@@ -1,3 +1,20 @@
 body{
     background-color: #F2F5A9;
 }
+
+.bloco_de_imagem{
+    padding: 5px;
+    width: 30%;
+    height: 30%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(15, 139, 98);
+    display: block;
+    
+}
+
+.bloco_de_imagem img{
+    width: 100%;
+    height: 100%;
+}
+
