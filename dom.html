@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Aguinaldo Borges">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Tabelas em HTML</title>
+</head>
+<body>
+     <!-- cabeçalho -->
+     <header role="banner">
+
+        <nav role="navigation" aria-level="main navigation">
+            <ul role="menu">
+                <li><a href="index.html" role="menuitem">Home</a></li>
+                <li><a href="tabelas.html" role="menuitem">Tabelas</a></li>
+                <li><a href="divsoes.html" role="menuitem">Divs</a></li>
+                <li><a href="formularios.html" role="menuitem">Formulários</a></li>
+                <li><a href="aria.html" role="menuitem">Acessibilidade ARIA</a></li>
+                <li><a href="dom.html" role="menuitem">DOM</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <!-- fim do cabeçalho -->
+
+   
+    <!-- Conteúdo principal -->
+    <main role="main">
+
+        <button aria-label="Acesse o site oficial da marvel para saber mais sobre o Baby Yoda" aria-labelledby="bsite">Saber mais</button>
+        <p id="bsite">Site do Baby yoda</p>
+
+
+        <table summary="Descrição da tabela para leitura em acessibilidade">
+
+            <caption>Tabela Atividades por Mês</caption>
+            <thead>
+                <tr>
+                    <th abbr="Mês" scope="col">Mês da Atividade</th>
+                    <th abbr="Atividade"  scope="col">Nome da Atividade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th colspan="2"  scope="row">Janeiro</th>
+                    
+                </tr>
+                <tr>
+                    <th   scope="row">Fevereiro</th>
+                    <td rowspan="2">Meditação</td>
+                </tr>
+                <tr>
+                    <th   scope="row">Março</th>
+                    
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total de Atividades</td>
+                    <td>2 Atividades</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="bloco_de_imagem" >
+            <img src="img/cavaleiros/Dohko-full.jpg" alt="dohko" title="dohko" aria-labelledby="descryption-dohko">
+            <button id="botao1" onclick="atualizacao()">Atualizar descrição</button>
+            <p id="dohko-original">
+                Dohko de Libra (天秤座の童虎, Raibura no Dōko?) fora um lendário e renomado Cavaleiro de Ouro do Santuário de Atena por
+                ter lutado e sobrevivido a Guerra Santa contra Hades no Século XVIII ao lado de seu parceiro de batalhas, Shion de
+                Áries. Após o fim do conflito e ser incumbido por Atena de vigiar o selo que aprisionava o espectros do Imperador
+                dos Mortos, Dohko ficou recluso nos Cinco Picos Antigos de Rozan até o Século XX, período que passara a ser venerado
+                como Mestre Ancião (老師, Rōshi?) e, ao mesmo tempo que mantinha sua vigília, treinou Shiryu, que se tornaria o
+                Cavaleiro de Bronze de Dragão. Nesta época, depois de descobrir que Saga de Gêmeos havia tomado o lugar de Shion
+                como Grande Mestre do Santuário, Dohko auxilou seu discípulo junto de seus demais amigos em inúmeras ocasiões a fim
+                de impedir os planos do Cavaleiro renegado de dominar o mundo bem como fora um dos principais articuladores para
+                desmascarar sua farsa.
+            </p>
+
+            <p id="descryption-dohko">
+                Dohko de Libra (天秤座の童虎, Raibura no Dōko?) fora um lendário e renomado Cavaleiro de Ouro do Santuário de Atena por
+                ter lutado e sobrevivido a Guerra Santa contra Hades no Século XVIII ao lado de seu parceiro de batalhas, Shion de
+                Áries. Após o fim do conflito e ser incumbido por Atena de vigiar o selo que aprisionava o espectros do Imperador
+                dos Mortos, Dohko ficou recluso nos Cinco Picos Antigos de Rozan até o Século XX, período que passara a ser venerado
+                como Mestre Ancião (老師, Rōshi?) e, ao mesmo tempo que mantinha sua vigília, treinou Shiryu, que se tornaria o
+                Cavaleiro de Bronze de Dragão. Nesta época, depois de descobrir que Saga de Gêmeos havia tomado o lugar de Shion
+                como Grande Mestre do Santuário, Dohko auxilou seu discípulo junto de seus demais amigos em inúmeras ocasiões a fim
+                de impedir os planos do Cavaleiro renegado de dominar o mundo bem como fora um dos principais articuladores para
+                desmascarar sua farsa.
+            </p>
+
+            <script type="text/javascript">
+                var paragrafo = document.getElementById("descryption-dohko")
+                paragrafo.style.color="blue"
+
+                paragrafo.innerText = "Texto Mudou"
+
+                function atualizacao(){
+                    var texto1 = document.getElementById("descryption-dohko");
+
+                    texto1.innerText = "SUCESSO!!!";
+
+                }
+
+
+            </script>
+        </div>
+
+        <div class="bloco_de_imagem" >
+            <img src="img/cavaleiros/Aiolos-full.jpg">
+        </div>
+
+        <div class="bloco_de_imagem" >
+            <img src="img/cavaleiros/Marin-full.jpg">
+        </div>
+
+        <div class="bloco_de_imagem" >
+            <img src="img/cavaleiros/Luna-full.jpg">
+        </div>
+
+    </main>
+    <!-- fim do conteúdo principal -->
+
+    <!-- rodapé -->
+    <footer role="contentinfo" style="position: static; bottom: 0;">
+        &copy; 2021 Aguinaldo Borges
+    </footer>
+    <!-- fim do rodapé -->
+</body>
+</html>
