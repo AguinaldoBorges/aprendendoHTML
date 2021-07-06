@@ -4,12 +4,14 @@ body{
 
 .bloco_de_imagem{
     padding: 5px;
-    width: 30%;
-    height: 30%;
+    width: 48.5%;
+    height: 50%;
     border-style: solid;
     border-width: 5px;
     border-color: rgb(15, 139, 98);
     display: block;
+    float: left;
+    position: static;
     
 }
 
